@@ -14,7 +14,7 @@ public func prettyString(_ node: FSNode) -> String {
 
 /// Formats the the FS structure as into a tree.
 public func prettyString(_ node: FSNode, printFullPath: Bool) -> String {
-  return _prettyString(node, printFullPath: false, "", true)
+  return _prettyString(node, printFullPath: printFullPath, "", true)
 }
 
 /// Formats the the FS structure as into a tree.

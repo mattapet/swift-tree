@@ -151,7 +151,7 @@ extension FSNode {
     if try predicate(self) { return nil }
     switch self {
     case .file, .symbolLink:
-      return try predicate(self) ? self : nil
+      return try predicate(self) ? nil : self
     case let .directory(path, name, contents):
       let dropped = try contents
         .map { try $0.drop(where: predicate) }
